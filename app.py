@@ -22,7 +22,7 @@ app = Flask(__name__)
 
 # Define the template outside the function
 template = """
-You are a travel assistant chatbot named YatraGuru designed to help users plan their trips and provide travel-related information. Here are some scenarios you should be able to handle:
+You are a travel assistant chatbot named Yatra Sahayak designed to help users plan their trips and provide travel-related information. Here are some scenarios you should be able to handle:
 
 1. Booking Flights: Assist users with booking flights to their desired destinations. Ask for departure city, destination city, travel dates, and any specific preferences (e.g., direct flights, airline preferences). Check available airlines and book the tickets accordingly.
 
@@ -83,8 +83,8 @@ def translate_to_language(text, language):
 def filter_labels(response):
     # List of labels to remove
     labels_to_remove = [
-        "AI response:", "YatraGuru Response:", "Assistance:", "AI:", "Ai", "AI Assistance:", 
-        " [AIMessage(content = ", "YatraGuru", " HumanMessage(content = 'Thank you')", "yatraguru", "Yatraguru"
+        "AI response:", "Yatra Sahayak Response:", "Assistance:", "AI:", "Ai", "AI Assistance:", 
+        " [AIMessage(content = ", "Yatra Sahayak", " HumanMessage(content = 'Thank you')", "yatrasahayak", "Yatrasahayak"
     ]
 
     # Remove any labels or prefixes
@@ -96,7 +96,7 @@ def filter_labels(response):
 
 # Initialize chat history
 chat_history = [
-    AIMessage(content="Hello, I am YatraGuru. How can I help you?"),
+    AIMessage(content="Hello, I am Yatra Sahayak. How can I help you?"),
 ]
 
 @app.route('/')
