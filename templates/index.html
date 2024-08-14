@@ -11,6 +11,14 @@
             background-color: #e9ecef;
             color: #333;
         }
+         #back-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 24px;
+            color: #007bff;
+            cursor: pointer;
+        }
         #chat {
             height: 500px;
             overflow-y: auto;
@@ -62,8 +70,15 @@
             font-size: 16px;
             transition: background-color 0.3s ease;
         }
+        #voice-input, #stop-voice, #send-button {
+            background-color: transparent;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
         #voice-input {
-            background-color: #28a745;
+           
             color: white;
             border: none;
         }
@@ -71,7 +86,7 @@
             background-color: #218838;
         }
         #stop-voice {
-            background-color: #dc3545;
+          
             color: white;
             border: none;
             margin-left: 10px;
@@ -133,7 +148,8 @@
     </style>
 </head>
 <body>
-    <h1>YatraGuru ✈️</h1>
+    <div id="back-icon" onclick="history.back();" style="position: absolute; top: 10px; left: 10px; cursor: pointer; font-size: 32px;">&nbsp; ↩</div>
+    <h1>Yatra Sahayak ✈️</h1>
     <div id="chat"></div>
     <div id="loading" class="loading">
         <div class="dots">
@@ -156,9 +172,9 @@
     </form>
     <form id="chat-form" class="container">
         <input type="text" id="user-query" placeholder="Type your message here..." required>
-        <button type="submit" class="btn btn-primary">Send</button> &nbsp;&nbsp;
-        <button type="button" id="voice-input" class="btn btn-success">🎤</button>
-        <button type="button" id="stop-voice" class="btn btn-danger">🛑</button>
+        <button type="submit" id="send-button" class="btn btn-primary"> <img src="https://cdn-icons-png.flaticon.com/512/876/876777.png" alt="Send" style="width:24px; height:24px;"></button> &nbsp;&nbsp;
+        <button type="button" id="voice-input" class="btn btn-success"><img src="https://cdn-icons-png.flaticon.com/512/709/709950.png" alt="Mic" style="width:24px; height:24px;"></button>
+        <button type="button" id="stop-voice" class="btn btn-danger">⏸</button>
     </form>
     
     <script>
