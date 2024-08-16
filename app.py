@@ -10,17 +10,17 @@ from googletrans import Translator  # Google Translate library
 # Load environment variables from .env file
 load_dotenv()
 
-# Get the API token from environment variable
+
 api_token = os.getenv("HUGGINGFACEHUB_API_TOKEN")
 
 # Define the repository ID and task
 repo_id = "mistralai/Mixtral-8x7B-Instruct-v0.1"
 task = "text-generation"
 
-# Flask app setup
+
 app = Flask(__name__)
 
-# Define the template outside the function
+
 template = """
 You are a travel assistant chatbot named Yatra Sahayak designed to help users plan their trips and provide travel-related information. Here are some scenarios you should be able to handle:
 
@@ -84,7 +84,7 @@ def filter_labels(response):
     # List of labels to remove
     labels_to_remove = [
         "AI response:", "Yatra Sahayak Response:", "Assistance:", "AI:", "Ai", "AI Assistance:", 
-        " [AIMessage(content = ", "Yatra Sahayak", " HumanMessage(content = 'Thank you')", "yatrasahayak", "Yatrasahayak"
+        " [AIMessage(content = ", "Yatra Sahayak", " HumanMessage(content = 'Thank you')", "yatrasahayak", "Yatrasahayak", "response:"
     ]
 
     # Remove any labels or prefixes
