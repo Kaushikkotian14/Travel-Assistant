@@ -22,5 +22,5 @@ Ask (/ask): Accepts user queries via POST request and returns responses from the
  **Python Virtual Env setup:**
 - 1.python -m venv myenv
 - 2.to start = .\venv\Scripts\activate
-- 3. python app.py
+- 3.python app.py
 - 4.to deactivate = deactivate
